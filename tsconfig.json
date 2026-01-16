@@ -3,6 +3,7 @@
         "target": "ESNext",
         "module": "ESNext",
         "moduleResolution": "Bundler",
+        "allowJs": true,
         "strict": true,
         "jsx": "preserve",
         "sourceMap": true,
@@ -15,5 +16,8 @@
             "@/*": ["resources/js/*"]
         }
     },
-    "include": ["resources/js/**/*"]
+    "include": [
+        "resources/js/**/*",
+        "resources/js/**/*.vue"
+    ]
 }

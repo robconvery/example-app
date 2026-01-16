@@ -15,9 +15,13 @@
             errors: @json($errors->getBag('default')->toArray()),
             old: @json(old()),
         }
+
+        window.__PAGE__ = @json($page ?? ['component' => null, 'props' => [],'url' => request()->getRequestUri()]);
+
     </script>
 
-    @vite(['resources/js/app.js'])
+    @vite(['resources/js/app.ts'])
+
 </head>
 <body>
 <div id="app"></div>
